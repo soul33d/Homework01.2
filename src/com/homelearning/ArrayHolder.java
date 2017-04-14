@@ -11,9 +11,9 @@ public class ArrayHolder {
     void execute(){
         readArrayFromInput();
         sortedArray = initialArray.clone();
-        printArray("Initial initialArray:", initialArray);
+        printArray("Initial array:", initialArray);
         sortArray();
-        printArray("Sorted initialArray:", sortedArray);
+        printArray("Sorted array:", sortedArray);
     }
 
     private void readArrayFromInput() {
