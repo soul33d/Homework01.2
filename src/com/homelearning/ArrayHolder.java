@@ -11,15 +11,15 @@ public class ArrayHolder {
     void execute(){
         readArrayFromInput();
         sortedArray = initialArray.clone();
-        printArray("Initial array:", initialArray);
         sortArray();
+        printArray("Initial array:", initialArray);
         printArray("Sorted array:", sortedArray);
     }
 
     private void readArrayFromInput() {
+        Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < initialArray.length; i++) {
             System.out.println(String.format("Enter number %d:", i + 1));
-            Scanner scanner = new Scanner(System.in);
             if (scanner.hasNextInt()){
                 initialArray[i] = scanner.nextInt();
             } else {
@@ -27,6 +27,7 @@ public class ArrayHolder {
                 i--;
             }
         }
+        scanner.close();
     }
 
     private void printArray(String msg, int[] array){
